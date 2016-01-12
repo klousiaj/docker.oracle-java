@@ -1,7 +1,7 @@
-FROM centos:7
+FROM busybox
 MAINTAINER J.P. Klousia <klousiaj>
 
-# install curl so we can
+# install curl so we can download java
 RUN yum install -y curl wget unzip; yum upgrade -y; yum update -y;  yum clean all
 
 # get Oracle java rather than the OpenJDK version
