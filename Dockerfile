@@ -1,4 +1,4 @@
-FROM progrium/busybox
+FROM busybox
 MAINTAINER J.P. Klousia <klousiaj>
 
 # taken from https://github.com/patrickmslatteryvt/busybox-java/tree/master/jdk8
