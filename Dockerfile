@@ -1,8 +1,11 @@
-FROM centos:7
+FROM debian:wheezy
 MAINTAINER J.P. Klousia <klousiaj>
 
 # install curl so we can
-RUN yum install -y curl wget unzip; yum upgrade -y; yum update -y;  yum clean all
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends \
+		curl wget unzip \
+	&& rm -rf /var/lib/apt/lists/*
 
 # get Oracle java rather than the OpenJDK version
 ENV JDK_VERSION 7u79
